@@ -10,7 +10,7 @@ export default function POSApp() {
   // 商品情報を取得する関数
   const fetchProduct = async () => {
     try {
-      const response = await axios.get(`http://localhost:5000/api/product/${code}`);
+      const response = await axios.get(`https://tech0-gen8-step4-pos-app-88.azurewebsites.net/api/product/${code}`);
       console.log(response.data);  // デバッグ用のログ
       setProduct(response.data);
     } catch (error) {
