@@ -51,7 +51,7 @@ export default function POSApp() {
         quantity: item.quantity,
       }));
 
-      const response = await axios.post("http://localhost:5000/api/purchase/", {
+      const response = await axios.post("https://tech0-gen8-step4-pos-app-88.azurewebsites.net/api/purchase/", {
         cashier_id: "9999999999",
         items,
       });
