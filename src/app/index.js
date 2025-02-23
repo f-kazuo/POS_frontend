@@ -10,7 +10,7 @@ export default function POSApp() {
   // 商品情報を取得する関数
   const fetchProduct = async () => {
     try {
-      const response = await axios.get(`https://tech0-gen8-step4-pos-app-88.azurewebsites.net/api/product/${code}`);
+      const response = await axios.get(`https://tech0-gen8-step4-pos-app-88.azurewebsites.net/product/${code}`);
       console.log(response.data);  // デバッグ用のログ
       setProduct(response.data);
     } catch (error) {
@@ -51,7 +51,7 @@ export default function POSApp() {
         quantity: item.quantity,
       }));
 
-      const response = await axios.post("https://tech0-gen8-step4-pos-app-88.azurewebsites.net/api/purchase/", {
+      const response = await axios.post("https://tech0-gen8-step4-pos-app-88.azurewebsites.net/purchase/", {
         cashier_id: "9999999999",
         items,
       });
